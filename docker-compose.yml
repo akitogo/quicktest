@@ -1,0 +1,25 @@
+# For more information: https://laravel.com/docs/quicktest
+version: '3.6'
+services:
+    mysql:
+        image: 'mariadb'
+        command: --lower_case_table_names=1
+        ports:
+            - '${FORWARD_DB_PORT:-3306}:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ROOT_HOST: "%"
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+        volumes:
+            - 'quicktest-mysql:/var/lib/mysql'
+        networks:
+            - quicktest
+networks:
+    quicktest:
+        driver: bridge
+volumes:
+    quicktest-mysql:
+        driver: local

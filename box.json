@@ -1,0 +1,39 @@
+{
+    "name":"Quick with Auth Template",
+    "version":"5.0.2",
+    "author":"You",
+    "location":"",
+    "slug":"",
+    "createPackageDirectory":false,
+    "type":"mvc",
+    "keywords":"",
+    "homepage":"",
+    "documentation":"",
+    "repository":{
+        "type":"",
+        "url":""
+    },
+    "bugs":"",
+    "shortDescription":"",
+    "contributors":[],
+    "ignore":[],
+    "devDependencies":{
+        "testbox":"^5.0.0",
+        "commandbox-dotenv":"*",
+        "commandbox-migrations":"*",
+        "commandbox-cfconfig":"*",
+        "commandbox-cfformat":"*",
+        "cfmigrations":"^4.0.0"
+    },
+    "installPaths":{
+        "coldbox":"coldbox/",
+        "quick":"modules/quick/",
+        "cfmigrations":"modules/cfmigrations/",
+    },
+    "dependencies":{
+        "coldbox":"^7.1.0+10",
+        "quick":"^7.2.0",
+    },
+    "scripts":{
+    }
+}
